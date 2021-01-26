@@ -1,0 +1,12 @@
+header {
+  align-items: center;
+  background: #FF79DA;
+  display: flex;
+  justify-content: center;
+}
+
+.picture_container {
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=style.css.map */
