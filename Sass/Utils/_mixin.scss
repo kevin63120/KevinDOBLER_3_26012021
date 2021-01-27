@@ -1,0 +1,21 @@
+@mixin carte{
+  width:100% ;
+
+
+}
+@mixin steps_icon-width{
+  width: 3rem;
+  text-align: center;
+}
+
+@mixin cart-color($background, $color){
+    background:$background;
+    color:$color;
+}
+
+@mixin cart_image-size($height-image: 200px,$border-top-left-radius: 15px, $border-top-right-radius: 15px ){
+  object-fit: cover;
+  height: $height-image;
+  border-top-left-radius: $border-top-left-radius;
+  border-top-right-radius: $border-top-right-radius;
+}

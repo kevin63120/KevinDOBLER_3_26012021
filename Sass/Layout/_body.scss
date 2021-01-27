@@ -1,0 +1,16 @@
+body{
+  background-color: $color-background-primary;
+  font-family: $font-family-txt;
+}
+.container_carts{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: $color-background-secondary;
+  h2{
+    width: 100%;
+    max-width: 330px;
+
+  }
+
+}

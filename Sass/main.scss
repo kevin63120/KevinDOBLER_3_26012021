@@ -1,5 +1,22 @@
-@import 'Utils/colors';
+
 @import "Base/fonts";
-@import "Layout/header";
-@import "Layout/footer";
+@import "Utils/colors";
+@import "Utils/mixin";
+@import "Utils/extend";
+@import "Composants/butons";
+@import "Composants/cart";
 @import "Composants/picture-container";
+
+@import "Layout/header";
+@import "Layout/body";
+@import "Layout/footer";
+
+
+
+
+
+
+
+
+
+

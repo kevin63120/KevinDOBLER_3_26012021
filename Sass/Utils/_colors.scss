@@ -1,15 +1,22 @@
 //global colors;
-$color-primary:#9356DC;
-$color-secondary:#FF79DA;
-$color-tertiary:#99E2D0;
-
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$color-gradient-secondary:#A25BDB;
 //header colors;
-$color-localisation-background:#EAEAEA;
+$color-localisation-background: #EAEAEA;
 //body colors;
-$color-body-background:#F6F6F6;
+$color-background-primary: white;
+
+$color-background-secondary:#f6f6f6;
 
 
 
 //footer colors;
 $color-footer-background:black;
 $color-footer-txt:#F8F8F8;
+
+//button color;
+$color-button:white;
+$color_button_background: #FF79DA;
+

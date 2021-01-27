@@ -1,0 +1,10 @@
+//noinspection ALL
+button{
+
+  color:white;
+  background:linear-gradient($color-button-background, $color-primary) ;
+  width: 10.5rem;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  height: 2.5rem;
+}
