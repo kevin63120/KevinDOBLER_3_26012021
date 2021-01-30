@@ -1,16 +1,35 @@
 body{
   background-color: $color-background-primary;
   font-family: $font-family-txt;
+  margin: 0;
+
 }
+
 .container_carts{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   background: $color-background-secondary;
+  padding-bottom: 4rem;
   h2{
     width: 100%;
     max-width: 330px;
+    margin: 4rem 0 0;
 
   }
 
+}
+//specific body (content pages)
+
+.body_pages{
+  background-color: $color-background-secondary;
+
+}
+.button-position{
+  @include box-poistion($axey:flex-start);
+}
+
+h2{
+  font-weight: 100;
+  text-decoration: underline #0000ff ;
 }

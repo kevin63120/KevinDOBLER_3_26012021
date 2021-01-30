@@ -1,8 +1,25 @@
 footer{
-  display: flex;
+  @include footer-color(#353535, white);
+  padding: 1rem;
+ p{
+   margin: 0.5rem 0;
+ }
+ li{
+  margin: 0.5rem 0;
+}
 
-  justify-content: center;
+}
+.container-footer{
+  width: 300px;
+  margin-left: 0.4rem;
+
   li{
-   list-style: none;
+    list-style: none;
+  }
+  .logo-txt{
+    font-family:$font-family-title;
+    font-size: x-large;
+    width:100%;
+
   }
 }

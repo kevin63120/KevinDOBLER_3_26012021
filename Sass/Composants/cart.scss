@@ -1,4 +1,6 @@
-
+a{
+  text-decoration: none;
+}
 .cart{
   @include cart-color(#FFFF, #000000);
   display: flex;
@@ -6,9 +8,10 @@
   align-items: center;
   justify-content: space-around;
   max-width: 330px;
-  margin: 2rem 0 2rem 0;
-  border-radius: 5px;
+  margin: 1rem 0 0.4rem 0;
+  border-radius: 15px;
   border: 1px transparent solid;
+  box-shadow: #d2d2d2 3px 3px 19px 7px;
     @media screen and (min-width:700px){
       margin: 2rem;
       max-width: 450px;
@@ -16,18 +19,28 @@
       font-weight: bold;
 
     }
+  .cart_image{
+    @include carte;
+    .image_restaurant{
 
-}
+      @include cart_image-size();
+    }
+  }
+  .cart_text{
+    display: flex;
 
+    padding: 0 1rem;
+    justify-content: space-between;
+    align-items: center;
 
-
-.cart_image{
-@include carte;
-  img{
-   width: inherit;
+    .fa-heart{
+      font-size: x-large;
+      position: relative;
+      right: 10px;
+      top: 0;
+    }
   }
 }
-.image_restaurant{
 
-  @include cart_image-size();
-}
+
+
