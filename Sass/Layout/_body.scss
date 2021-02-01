@@ -3,9 +3,12 @@ body{
   font-family: $font-family-txt;
   margin: 0;
 
+
+
 }
 
 .container_carts{
+  @include padding-flex-mobile-desktop;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -15,7 +18,10 @@ body{
     width: 100%;
     max-width: 330px;
     margin: 4rem 0 0;
+  @media screen and (min-width: 700px) {
+    max-width: 100%;
 
+  }
   }
 
 }
@@ -26,7 +32,7 @@ body{
 
 }
 .button-position{
-  @include box-poistion($axey:flex-start);
+  @include box-position($axey:flex-start);
 }
 
 h2{
