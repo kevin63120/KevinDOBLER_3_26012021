@@ -1,11 +1,10 @@
 //header all pages
 header{
 
-  align-items: center;
+  font-family: "roboto", serif;
+  font-weight: bold;
   background: $color-background-primary;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
 
 
 }
@@ -16,9 +15,9 @@ header{
   font-family: Shrikhand,Serif ;
   text-align: center;
   padding: 1rem 0rem 1rem 0;
-  width: 100%;
+
   box-shadow: #D2D2D2 0px 4px 0px 0px;
-  z-index: 2;
+
 
 
 }
@@ -29,7 +28,7 @@ header{
   align-items: center;
   background-color: $color-localisation-background;
   text-align: center;
-  width: 100%;
+
     p{
       margin-left: 1rem;
     }
@@ -41,6 +40,7 @@ header{
   flex-direction: column;
   align-items: center;
    width: 100%;
+  font-weight: lighter;
   @media screen and (min-width: 700px) {
     padding-bottom: 2rem;
 
@@ -60,35 +60,42 @@ header{
       }
 }
 .section_steps_container{
+  @include padding-flex-mobile-desktop;
 
-    width: 100%;
-   margin-left: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
 }
 .container_step_title{
-  width: 90%;
-  max-width:410px ;
+  padding-left: 0.5rem;
+  h2{margin: 0 0 0 2%;
+  }
+
 }
 .steps_container{
-  padding:0;
-  text-align: start;
-  width: 90%;
-  max-width: 400px;
+  h2{
+
+  }
+
+ padding: 1rem;
+ @media screen and(min-width:1400px ) {
+   display: flex;
+   justify-content: space-evenly;
+ ;
+   
+ }
 
 
 }
 .step{
   display: flex;
   align-items: center;
-  border: 1px transparent solid;
+  padding-right: 1rem;
+
   border-radius: 15px;
   background: $color-background-secondary;
 
   height: 4rem;
   margin: 1rem 0 0 0;
+
    i{
       @include steps_icon-width;
      }
@@ -119,7 +126,9 @@ header{
   object-fit: cover;
 
 }
-
+.header_pages{
+  text-align: center;
+}
 .title-hight-page{
 margin: 1rem;
 
@@ -128,6 +137,6 @@ margin: 1rem;
 .fa-arrow-left{
 font-size: large;
 position: relative;
-bottom: 30px;
+bottom: 27px;
 right: 40px;
 }

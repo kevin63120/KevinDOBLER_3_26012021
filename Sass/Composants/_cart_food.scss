@@ -1,15 +1,27 @@
 .container_food{
-  z-index: 2;
+
+  
   position: relative;
   bottom: 50px;
   background: $color-background-secondary;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   padding: 1rem 0.5rem;
+  h2{
+    &::after{
+      display: flex;
+      content: "";
+      border: #99E2D0 2px solid;
+      width: 50px;
+      margin-top: 0.5rem;
+    }
+  }
+
   @media screen and (min-width: 700px){
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+
     h2{
       width: 100%;
       padding-left: 2rem;
@@ -18,8 +30,8 @@
     .title-page{
       width: 100%;
       font-size: 4.5rem;
-      padding-left: 1rem;
-      margin-left: auto;
+
+      margin-left: 2rem;
       margin-bottom: 2rem;
     }
 
@@ -36,14 +48,19 @@
   h1{
     font-size: x-large;
 
+
   }
   .fa-heart2{
     font-size: x-large;
-  }
-  @media screen and (min-width: 700px) {
+    margin-right: 2rem;
+    }
+
+  @media screen and (min-width: 700px)
+  {
     font-size: large;
     h1{
-      margin: 0 0 0 20%
+      margin:0;
+
     }
     .fa-heart2{
       font-size: x-large;
@@ -58,7 +75,7 @@
   border: 5px $color-background-primary solid;
   background: $color-background-primary;
   display: flex;
-  flex-wrap: wrap;
+  //flex-wrap: wrap;
   justify-content: space-between;
   border-radius: 15px;
   margin: 2rem 0;
@@ -74,11 +91,11 @@
 
   }
   .food_text-size-max{
-    width: 100%;
+    
     font-weight: bold;
     @media screen and (min-width: 700px){
       font-size:1.5rem;
-      padding: 8%;
+      
       background: $color-background-secondary;
       border-radius: 15px;
       text-align: center;
@@ -100,4 +117,8 @@
 
 
   }
+}
+
+article>.menu{
+  @include suspention-points;
 }

@@ -1,0 +1,48 @@
+
+@mixin animation-validation($color1:$color-tertiary,$duration:500ms){
+  background-color: $color1;
+  
+  transition:  $duration ;
+}
+@mixin animation-heart {
+  color: pink;
+  transition: 1s;
+  
+}
+
+
+@mixin animation-step-background ($background-color:$color-secondary){
+  background-color:  transparentize($background-color,0.7);
+  
+  transition-duration: 500ms;
+
+}
+@mixin animation-step-color-icons ($color:$color-primary){
+  color: $color;
+  transition-duration: 500ms;
+  
+}
+.animation{
+  @include animation-validation;
+  padding-right: 0;
+  
+
+ &:hover{
+   
+   padding-right: 100px;
+
+ }
+}
+
+.step{
+  &:hover{ @include animation-step-background();
+    .step_icon{ 
+       @include animation-step-color-icons();
+ }
+}
+}
+
+.fa-heart:hover{
+  @include animation-heart();
+
+}

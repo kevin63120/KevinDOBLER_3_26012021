@@ -7,6 +7,7 @@ body{
 
 }
 
+
 .container_carts{
   @include padding-flex-mobile-desktop;
   display: flex;
@@ -16,8 +17,8 @@ body{
   padding-bottom: 4rem;
   h2{
     width: 100%;
-    max-width: 330px;
-    margin: 4rem 0 0;
+    margin-left: 3%;
+
   @media screen and (min-width: 700px) {
     max-width: 100%;
 
@@ -35,7 +36,3 @@ body{
   @include box-position($axey:flex-start);
 }
 
-h2{
-  font-weight: 100;
-  text-decoration: underline #0000ff ;
-}

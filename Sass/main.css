@@ -1,3 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: black;
+}
+
 .step_icon-margin {
   margin: 0 2rem 0 2rem;
 }
@@ -6,7 +16,6 @@ button {
   color: white;
   background: linear-gradient(#FF79DA, #9356DC);
   width: 10.5rem;
-  border: 1px solid transparent;
   border-radius: 25px;
   height: 2.5rem;
 }
@@ -38,6 +47,7 @@ a {
 }
 .cart .cart_image {
   width: 100%;
+  position: relative;
 }
 .cart .cart_image .image_restaurant {
   width: inherit;
@@ -45,6 +55,7 @@ a {
   height: 180px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  z-index: 1;
 }
 .cart .cart_text {
   display: flex;
@@ -64,13 +75,25 @@ a {
 }
 
 .container_food {
-  z-index: 2;
   position: relative;
   bottom: 50px;
   background: #f6f6f6;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   padding: 1rem 0.5rem;
+}
+.container_food .food_desk {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.container_food h2::after {
+  display: flex;
+  content: "";
+  border: #99E2D0 2px solid;
+  width: 50px;
+  margin-top: 0.5rem;
 }
 @media screen and (min-width: 700px) {
   .container_food {
@@ -85,8 +108,7 @@ a {
   .container_food .title-page {
     width: 100%;
     font-size: 4.5rem;
-    padding-left: 1rem;
-    margin-left: auto;
+    margin-left: 2rem;
     margin-bottom: 2rem;
   }
 }
@@ -102,13 +124,14 @@ a {
 }
 .title-page .fa-heart2 {
   font-size: x-large;
+  margin-right: 2rem;
 }
 @media screen and (min-width: 700px) {
   .title-page {
     font-size: large;
   }
   .title-page h1 {
-    margin: 0 0 0 20%;
+    margin: 0;
   }
   .title-page .fa-heart2 {
     font-size: x-large;
@@ -157,21 +180,40 @@ a {
   }
 }
 
+.stickers-new {
+  background: #99E2D0;
+  color: #278870;
+  width: max-content;
+  padding: 0.4rem;
+  border-radius: 2px;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.new::after {
+  content: "nouveau";
+  background: #99E2D0;
+  width: max-content;
+  padding: 0.4rem;
+  border-radius: 2px;
+  font-size: 1.2rem;
+  position: relative;
+  right: 0;
+}
+
 header {
-  align-items: center;
+  font-family: "roboto", serif;
+  font-weight: bold;
   background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .logo {
   font-family: Shrikhand, Serif;
   text-align: center;
   padding: 1rem 0rem 1rem 0;
-  width: 100%;
   box-shadow: #D2D2D2 0px 4px 0px 0px;
-  z-index: 2;
 }
 
 .container_localisation {
@@ -180,7 +222,6 @@ header {
   align-items: center;
   background-color: #EAEAEA;
   text-align: center;
-  width: 100%;
 }
 @media screen and (min-width: 700px) {
   .container_localisation {
@@ -206,6 +247,7 @@ header {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  font-weight: lighter;
   padding: 2rem 0 2rem;
   background: #f6f6f6;
 }
@@ -239,30 +281,43 @@ header {
   margin-top: 0.5rem;
 }
 
-.section_steps_container {
-  width: 100%;
-  margin-left: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@media screen and (min-width: 700px) {
+  .section_steps_container {
+    padding: 0 10%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .section_steps_container {
+    padding: 0 20%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section_steps_container {
+    padding: 0 20%;
+  }
 }
 
 .container_step_title {
-  width: 90%;
-  max-width: 410px;
+  padding-left: 0.5rem;
+}
+.container_step_title h2 {
+  margin: 0 0 0 2%;
 }
 
 .steps_container {
-  padding: 0;
-  text-align: start;
-  width: 90%;
-  max-width: 400px;
+  padding: 1rem;
+}
+@media screen and (min-width: 1400px) {
+  .steps_container {
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
 
 .step {
   display: flex;
   align-items: center;
-  border: 1px transparent solid;
+  padding-right: 1rem;
   border-radius: 15px;
   background: #f6f6f6;
   height: 4rem;
@@ -295,6 +350,10 @@ header {
   object-fit: cover;
 }
 
+.header_pages {
+  text-align: center;
+}
+
 .title-hight-page {
   margin: 1rem;
 }
@@ -302,7 +361,7 @@ header {
 .fa-arrow-left {
   font-size: large;
   position: relative;
-  bottom: 30px;
+  bottom: 27px;
   right: 40px;
 }
 
@@ -336,8 +395,7 @@ body {
 }
 .container_carts h2 {
   width: 100%;
-  max-width: 330px;
-  margin: 4rem 0 0;
+  margin-left: 3%;
 }
 @media screen and (min-width: 700px) {
   .container_carts h2 {
@@ -357,20 +415,13 @@ body {
   align-items: flex-start;
 }
 
-h2 {
-  font-weight: 100;
-  text-decoration: underline #0000ff;
-}
-
 footer {
   background: #353535;
   color: white;
-  width: 100%;
   padding: 1rem;
 }
 footer ul {
   padding-inline-start: 0;
-  width: 100%;
 }
 footer p {
   margin: 0.5rem 0;
@@ -390,7 +441,6 @@ footer li {
 }
 
 .container-footer {
-  width: 300px;
   margin-left: 0.4rem;
 }
 .container-footer li {
@@ -399,7 +449,6 @@ footer li {
 .container-footer .logo-txt {
   font-family: Shrikhand;
   font-size: x-large;
-  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

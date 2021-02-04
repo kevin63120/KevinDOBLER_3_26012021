@@ -7,6 +7,9 @@
   width: 3rem;
   text-align: center;
 }
+@mixin steps-hover{
+  background: lighten($color-primary: #9356DC, );
+}
 
 @mixin cart-color($background, $color){
     background:$background;
@@ -19,15 +22,16 @@
   height: $height-image;
   border-top-left-radius: $border-top-left-radius;
   border-top-right-radius: $border-top-right-radius;
+  z-index: 1;
 }
 
 @mixin footer-color($color-background, $color ){
   background: $color-background;
   color: $color;
-  width: 100%;
+
   ul{
     padding-inline-start: 0;
-    width: 100%;
+
   }
 
 
@@ -52,4 +56,13 @@
   }
 
 }
+@mixin mid-underline ($color:$color-tertiary){
+  content: "vsfg";
+  border-bottom: 1px solid $color;
 
+}
+@mixin suspention-points {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
