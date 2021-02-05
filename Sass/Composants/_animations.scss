@@ -1,15 +1,14 @@
 
-@mixin animation-validation($color1:$color-tertiary,$duration:500ms){
-  background-color: $color1;
-  
-  transition:  $duration ;
-}
-@mixin animation-heart {
-  color: pink;
-  transition: 1s;
-  
-}
+// data-base of Mixin animation 
 
+
+@mixin animation-heart {
+ 
+  opacity: 0;
+  
+  transition: all 0.5s;
+  
+}
 
 @mixin animation-step-background ($background-color:$color-secondary){
   background-color:  transparentize($background-color,0.7);
@@ -17,22 +16,17 @@
   transition-duration: 500ms;
 
 }
+
 @mixin animation-step-color-icons ($color:$color-primary){
   color: $color;
   transition-duration: 500ms;
   
 }
-.animation{
-  @include animation-validation;
-  padding-right: 0;
-  
 
- &:hover{
-   
-   padding-right: 100px;
+//start animation in Sass
 
- }
-}
+
+
 
 .step{
   &:hover{ @include animation-step-background();
@@ -46,3 +40,6 @@
   @include animation-heart();
 
 }
+
+
+
