@@ -75,15 +75,16 @@
   border: 5px $color-background-primary solid;
   background: $color-background-primary;
   display: flex;
-  //flex-wrap: wrap;
   justify-content: space-between;
   border-radius: 15px;
   margin: 2rem 0;
   box-shadow: #D2D2D2 4px 4px 15px 5px;
+
   p{
     margin: 0.1rem 0 ;
 
   }
+
   @media screen and(max-width: 700px){
     p{
       font-size: 1.1rem;
@@ -91,6 +92,7 @@
     }
 
   }
+
   .food_text-size-max{
     
     font-weight: bold;
@@ -100,12 +102,9 @@
       background: $color-background-secondary;
       border-radius: 15px;
       text-align: center;
-
-
     }
-
-
   }
+
   @media screen and (min-width: 700px) {
 
 
@@ -123,4 +122,5 @@
 
 article>.menu{
   @include suspention-points;
+  
 }

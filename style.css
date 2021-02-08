@@ -12,6 +12,32 @@ a {
   margin: 0 2rem 0 2rem;
 }
 
+@keyframes aparition-menu {
+  from {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+@keyframes menu-select {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes select-logo-rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1);
+  }
+}
 .step:hover {
   background-color: rgba(255, 121, 218, 0.3);
   transition-duration: 500ms;
@@ -24,6 +50,26 @@ a {
 .fa-heart:hover {
   opacity: 0;
   transition: all 0.5s;
+}
+
+.container_food {
+  animation: aparition-menu 2000ms ease-out;
+}
+
+.food .select {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: aquamarine;
+  width: 80px;
+}
+.food:hover .select {
+  display: flex;
+  background-color: #99E2D0;
+  animation: menu-select 3000ms;
+}
+.food:hover .fa-check-circle {
+  animation: fa-check-circle ease-in-out 2000ms;
 }
 
 button {

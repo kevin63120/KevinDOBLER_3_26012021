@@ -22,6 +22,38 @@
   transition-duration: 500ms;
   
 }
+// keyframes
+
+@keyframes aparition-menu{
+  from{
+     transform:scaleY(0) ;
+      opacity: 0;
+  }
+  to{
+     transform: scaleY(1) ;
+      opacity: 1;
+  }
+}
+
+@keyframes menu-select{
+  from{
+    transform: scaleX(0);
+    
+  }
+  to{
+    transform: scaleX(1);
+  }
+  
+  
+}
+@keyframes select-logo-rotate{
+  from{
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(1);
+  }
+}
 
 //start animation in Sass
 
@@ -41,5 +73,35 @@
 
 }
 
+.container_food{
+  animation:aparition-menu 2000ms ease-out;
 
+
+
+}
+
+.food{
+  .select{
+    display: none;
+    
+    
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    width: 80px;
+
+    
+  }
+  &:hover{
+    .select{
+      display: flex;
+      background-color: $color-tertiary;
+      animation: menu-select 3000ms ;
+
+    }
+    .fa-check-circle{
+      animation: fa-check-circle ease-in-out 2000ms;
+    }
+  }
+}
 
