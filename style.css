@@ -81,26 +81,14 @@ a {
 }
 @keyframes aparition-menu {
   from {
-    transform: scaleY(0);
     opacity: 0;
+    transform: scaleY(0);
   }
   to {
-    transform: scaleY(1);
     opacity: 1;
+    transform: scaleY(1);
   }
 }
-/*@keyframes menu-select{
-  from{
-    transform: scaleX(0);
-    transform-origin: 0% ;
-  }
-  to{
-    transform: scaleX(1);
-    transform-origin: 50% 0% 0% 0%;
-  }
-
-
-}*/
 @keyframes select-logo-rotate {
   from {
     transform: rotate(0);
@@ -123,18 +111,30 @@ a {
   transition: all 0.5s;
 }
 
-.food {
-  animation: aparition-menu 2000ms ease-out;
+.anim-delai1 {
+  animation: aparition-menu 2000ms cubic-bezier(0, 0, 1, -0.12);
+}
+
+.anim-delai2 {
+  animation: aparition-menu 2000ms cubic-bezier(0, 0, 1, -0.12) 0.2s;
+}
+
+.anim-delai3 {
+  animation: aparition-menu 2000ms cubic-bezier(0, 0, 1, -0.12) 0.4s;
 }
 
 .food .select {
-  position: relative;
   display: flex;
   height: 4rem;
   justify-content: center;
   align-items: center;
-  background-color: aquamarine;
+  background-color: #99E2D0;
+  color: beige;
   width: 80px;
+  margin: 0 -80px -4px -2px;
+}
+.food .select .fa-check-circle {
+  font-size: 2rem;
 }
 @media screen and (min-width: 700px) {
   .food .select {
@@ -142,12 +142,12 @@ a {
   }
 }
 .food:hover .select {
-  left: 0;
+  margin: 0;
   background-color: #99E2D0;
-  transition-duration: 500ms;
+  transition: 500ms ease-in-out;
 }
 .food:hover .fa-check-circle {
-  transform: rotate(360deg);
+  transform: rotate(1turn);
 }
 
 button {
@@ -207,15 +207,13 @@ a {
   position: relative;
   right: 10px;
   top: 0;
-  background-color: white;
 }
 .cart .cart_text .solid-heart {
   position: relative;
   left: 14px;
   opacity: 1;
-  background: -webkit-linear-gradient(#9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: linear-gradient(#9356DC, #FF79DA);
+  mix-blend-mode: lighten;
 }
 
 .picture_container {
@@ -302,9 +300,9 @@ a {
 .food {
   background: white;
   display: flex;
-  /* overflow: hidden; */
-  /* justify-content: space-between; */
-  /* align-items: flex-end; */
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: flex-end;
   border-radius: 15px;
   margin: 2rem 0;
   box-shadow: #d2d2d2 4px 4px 15px 5px;
@@ -329,7 +327,6 @@ a {
     width: 25rem;
     display: flex;
     align-items: end;
-    box-shadow: #9356dc 5px 5px 15px;
   }
 }
 

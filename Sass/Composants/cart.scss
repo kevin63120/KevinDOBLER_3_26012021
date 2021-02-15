@@ -38,24 +38,21 @@ a{
     padding: 0 1rem;
     justify-content: space-between;
     align-items: center;
-
-    .fa-heart{
+    
+     .fa-heart{
       font-size: x-large;
       position: relative;
       right: 10px;
       top: 0;
       
-      background-color: white;
+      
     }
     .solid-heart{
       position: relative;
       left:14px;
       opacity: 1;
-      background: -webkit-linear-gradient($color-primary,$color-secondary);
-     -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      
-      
+      background: linear-gradient($color-primary,$color-secondary);
+      mix-blend-mode: lighten;
     }
   }
 }
