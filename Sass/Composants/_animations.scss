@@ -22,7 +22,94 @@
   transition-duration: 500ms;
   
 }
+.loader{
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  z-index: 1000;
+  background-color: rgba(192, 186, 186, 0.884);
+  animation:emergence 3s 1;
+  
+      .loader_item{
+    opacity: 0;
+    z-index: 10000;
+    width: 250px;
+    height: 250px;
+    font-size: 3rem;
+    position: absolute;
+    font-family: $font-family-title ;
+    top:0;
+    left:45px;
+    border: transparent 14px solid;
+    border-left-color: $color-primary;
+    border-right-color: $color-secondary;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    background-color: $color-tertiary;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: spiner 3s  1  ease-in-out;
+      }
+     
+    }
+
+
 // keyframes
+@keyframes emergence{
+  from{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
+  to{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes spiner{
+   0%{
+     
+       display: block;
+       opacity: 1;
+       
+       
+     transform: rotate(10turn);
+     left: -10%;
+     top:10%;
+      
+   }
+   20%{
+     bottom: 0;
+     height: 20pX;
+     width: 200px;
+   }
+
+   30%{
+     
+   }
+   50%{
+
+      top:50px;
+      left: 90%;
+    }
+      
+    99%{
+      
+    }
+   100%{
+     opacity: 1;
+     left: 45%;
+     top: 0;
+     
+    }
+
+}
+
 
 @keyframes aparition-menu{
   from{
@@ -35,17 +122,18 @@
   }
 }
 
-@keyframes menu-select{
+/*@keyframes menu-select{
   from{
     transform: scaleX(0);
-    
+    transform-origin: 0% ;
   }
   to{
     transform: scaleX(1);
+    transform-origin: 50% 0% 0% 0%;
   }
   
   
-}
+}*/
 @keyframes select-logo-rotate{
   from{
     transform: rotate(0);
@@ -73,7 +161,7 @@
 
 }
 
-.container_food{
+.food{
   animation:aparition-menu 2000ms ease-out;
 
 
@@ -81,26 +169,33 @@
 }
 
 .food{
+
   .select{
-    display: none;
-    
-    
+    position: relative;
+    display: flex;
+    height: 4rem;
     justify-content: center;
     align-items: center;
     background-color: aquamarine;
     width: 80px;
+    
+     @media screen and (min-width:700px){
+      height: 100%;
+        }
 
     
   }
   &:hover{
     .select{
-      display: flex;
+      left: 0;
       background-color: $color-tertiary;
-      animation: menu-select 3000ms ;
-
+      transition-duration: 500ms;
+    
     }
+    
+
     .fa-check-circle{
-      animation: fa-check-circle ease-in-out 2000ms;
+      transform: rotate(360deg);
     }
   }
 }

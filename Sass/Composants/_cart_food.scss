@@ -38,6 +38,23 @@
   }
 }
 
+.food_container-txt{
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  align-items: flex-end;
+  padding: 0.5rem 0;
+  .menu{
+  @include suspention-points;
+  }
+  @media  screen and (min-width:700px) {
+  
+  padding: 1rem 0;     
+  }
+  
+}
+
+
 
 .title-page{
   display: flex;
@@ -72,26 +89,22 @@
 }
 
 .food{
-  border: 5px $color-background-primary solid;
   background: $color-background-primary;
-  display: flex;
-  justify-content: space-between;
-  border-radius: 15px;
-  margin: 2rem 0;
-  box-shadow: #D2D2D2 4px 4px 15px 5px;
+    display: flex;
+    /* overflow: hidden; */
+    /* justify-content: space-between; */
+    /* align-items: flex-end; */
+    border-radius: 15px;
+    margin: 2rem 0;
+    box-shadow: #d2d2d2 4px 4px 15px 5px;
 
   p{
-    margin: 0.1rem 0 ;
-
-  }
-
-  @media screen and(max-width: 700px){
-    p{
-      font-size: 1.1rem;
     
-    }
+    padding: 0.2rem 0 0.2rem 0.2rem;
+    margin: 0;
 
   }
+
 
   .food_text-size-max{
     
@@ -112,7 +125,7 @@
       
       display: flex;
       align-items: end;
-      justify-content: space-around;
+      
       box-shadow: #9356dc 5px 5px 15px;
 
 
@@ -120,7 +133,3 @@
   }
 }
 
-article>.menu{
-  @include suspention-points;
-  
-}
