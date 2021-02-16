@@ -2,10 +2,7 @@ a{
   text-decoration: none;
 }
 .cart{
-  .fa-heart::after{
-    
-
-  }
+  
   @include cart-color(#FFFF, #000000);
   display: flex;
   flex-wrap: wrap;
@@ -38,22 +35,65 @@ a{
     padding: 0 1rem;
     justify-content: space-between;
     align-items: center;
+
+    
+     .heart_container{
+      position: relative;
+      background-color: #FFFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    
+    .heart_container:hover::before{
+      opacity: 1;
+      transition: 5ms;
+      content: "";
+      background: linear-gradient(
+  0deg
+  , #9356dc, #ff79da);
+      position: inherit;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+      /* max-width: 32px; */
+      /* max-height: 30px; */
+      left: 22px;
+      top: 0px;
+      
+    }
+    
+   
     
      .fa-heart{
-      font-size: x-large;
+       opacity: 1;
+      
       position: relative;
       right: 10px;
       top: 0;
+      background: #FFFF;
       
+      &:hover{
+        opacity: 0;
+
+      }
       
     }
     .solid-heart{
       position: relative;
-      left:14px;
+      left: 22px;
       opacity: 1;
-      background: linear-gradient($color-primary,$color-secondary);
+      background-color: #FFFF;
       mix-blend-mode: lighten;
+      color: #000000;
+      
+
+      
     }
+
   }
 }
 

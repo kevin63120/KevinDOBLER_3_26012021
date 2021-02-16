@@ -18,7 +18,7 @@ a {
   opacity: 0;
   position: absolute;
   z-index: 1000;
-  background-color: rgba(192, 186, 186, 0.884);
+  background-color: rgba(255, 255, 255, 0.637);
   animation: emergence 3s 1;
 }
 .loader .loader_item {
@@ -26,22 +26,27 @@ a {
   z-index: 10000;
   width: 250px;
   height: 250px;
-  font-size: 3rem;
+  font-size: 8rem;
   position: absolute;
   font-family: Shrikhand;
   top: 0;
   left: 45px;
-  border: transparent 14px solid;
+  border: transparent 24px solid;
   border-left-color: #9356DC;
   border-right-color: #FF79DA;
   border-top-color: transparent;
   border-bottom-color: transparent;
-  background-color: #99E2D0;
+  background: linear-gradient(#99E2D0, #32b091);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: spiner 3s 1 ease-in-out;
+  animation: spinermobile 3s 1 ease-in-out;
+}
+@media screen and (min-width: 700px) {
+  .loader .loader_item {
+    animation: spinerdesktop 3s 1 ease-in-out;
+  }
 }
 
 @keyframes emergence {
@@ -56,7 +61,31 @@ a {
     opacity: 1;
   }
 }
-@keyframes spiner {
+@keyframes spinerdesktop {
+  0% {
+    display: block;
+    opacity: 1;
+    transform: rotateY(180deg);
+    left: 50%;
+    top: 60%;
+  }
+  20% {
+    bottom: 0;
+    height: 20pX;
+    width: 200px;
+  }
+  50% {
+    opacity: 1;
+    top: 50%;
+    transform: rotateY(360deg);
+  }
+  100% {
+    opacity: 1;
+    left: 35%;
+    top: 20%;
+  }
+}
+@keyframes spinermobile {
   0% {
     display: block;
     opacity: 1;
@@ -71,12 +100,12 @@ a {
   }
   50% {
     top: 50px;
-    left: 90%;
+    left: 70%;
   }
   100% {
     opacity: 1;
-    left: 45%;
-    top: 0;
+    left: 25%;
+    top: 50%;
   }
 }
 @keyframes aparition-menu {
@@ -112,15 +141,15 @@ a {
 }
 
 .anim-delai1 {
-  animation: aparition-menu 2000ms cubic-bezier(0, 0, 1, -0.12);
+  animation: aparition-menu 2000ms cubic-bezier(1, 0.07, 0.2, 0.96);
 }
 
 .anim-delai2 {
-  animation: aparition-menu 2000ms cubic-bezier(0, 0, 1, -0.12) 0.2s;
+  animation: aparition-menu 2500ms cubic-bezier(1, 0.07, 0.2, 0.96);
 }
 
 .anim-delai3 {
-  animation: aparition-menu 2000ms cubic-bezier(0, 0, 1, -0.12) 0.4s;
+  animation: aparition-menu 3000ms cubic-bezier(1, 0.07, 0.2, 0.96);
 }
 
 .food .select {
@@ -130,24 +159,30 @@ a {
   align-items: center;
   background-color: #99E2D0;
   color: beige;
-  width: 80px;
-  margin: 0 -80px -4px -2px;
+  width: 0;
+  margin: 0;
 }
 .food .select .fa-check-circle {
+  opacity: 0;
   font-size: 2rem;
+  transition-duration: 250ms;
 }
 @media screen and (min-width: 700px) {
   .food .select {
     height: 100%;
   }
 }
+.food:hover .food_container-txt {
+  width: calc(100% - 80px);
+}
 .food:hover .select {
-  margin: 0;
+  width: 80px;
   background-color: #99E2D0;
   transition: 500ms ease-in-out;
 }
 .food:hover .fa-check-circle {
   transform: rotate(1turn);
+  opacity: 1;
 }
 
 button {
@@ -202,18 +237,46 @@ a {
   justify-content: space-between;
   align-items: center;
 }
+.cart .cart_text .heart_container {
+  position: relative;
+  background-color: #FFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart .cart_text .heart_container:hover::before {
+  opacity: 1;
+  transition: 5ms;
+  content: "";
+  background: linear-gradient(0deg, #9356dc, #ff79da);
+  position: inherit;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  /* max-width: 32px; */
+  /* max-height: 30px; */
+  left: 22px;
+  top: 0px;
+}
 .cart .cart_text .fa-heart {
-  font-size: x-large;
+  opacity: 1;
   position: relative;
   right: 10px;
   top: 0;
+  background: #FFFF;
+}
+.cart .cart_text .fa-heart:hover {
+  opacity: 0;
 }
 .cart .cart_text .solid-heart {
   position: relative;
-  left: 14px;
+  left: 22px;
   opacity: 1;
-  background: linear-gradient(#9356DC, #FF79DA);
+  background-color: #FFFF;
   mix-blend-mode: lighten;
+  color: #000000;
 }
 
 .picture_container {
