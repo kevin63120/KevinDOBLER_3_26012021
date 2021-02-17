@@ -6,8 +6,9 @@
   background: $color-background-secondary;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  padding: 1rem 0.5rem;
+  padding: 1rem ;
   h2{
+    font-weight: 100;
     &::after{
       display: flex;
       content: "";
@@ -43,7 +44,7 @@
   justify-content: space-between;
   width: 95%;
   align-items: flex-end;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0.5rem 0.5rem;
   .menu{
   @include suspention-points;
   }
@@ -67,23 +68,18 @@
 
 
   }
-  .fa-heart2{
-    font-size: x-large;
-    margin-right: 2rem;
-    }
+  
 
   @media screen and (min-width: 700px)
   {
+    justify-content: space-around;
     font-size: large;
     h1{
       margin:0;
+      font-size: 3rem;
 
     }
-    .fa-heart2{
-      font-size: x-large;
-      margin: 0 20% 0 0;
-
-    }
+    
   }
 
 }
@@ -112,7 +108,7 @@
     @media screen and (min-width: 700px){
       font-size:1.5rem;
       
-      background: $color-background-secondary;
+      
       border-radius: 15px;
       text-align: center;
     }

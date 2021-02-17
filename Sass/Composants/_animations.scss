@@ -12,7 +12,7 @@
 
 
 @mixin animation-step-background ($background-color:$color-secondary){
-  background-color:  transparentize($background-color,0.7);
+  background-color:  rgb(245,238,255);
   
   transition-duration: 500ms;
 
@@ -219,13 +219,14 @@
     justify-content: center;
     align-items: center;
     background-color: $color-tertiary;
-    color: beige;
+    color: white;
     width: 0;
     margin: 0;
     .fa-check-circle{
       opacity: 0;
       font-size: 2rem;
-      transition-duration: 250ms;
+      
+      transition-duration: 550ms;
     }
     
      @media screen and (min-width:700px){

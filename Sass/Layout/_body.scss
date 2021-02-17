@@ -34,5 +34,6 @@ body{
 }
 .button-position{
   @include box-position($axey:flex-start);
+  margin-top: -33px;
 }
 

@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  width: auto;
 }
 
 a {
@@ -127,7 +128,7 @@ a {
   }
 }
 .step:hover {
-  background-color: rgba(255, 121, 218, 0.3);
+  background-color: #f5eeff;
   transition-duration: 500ms;
 }
 .step:hover .step_icon {
@@ -158,14 +159,14 @@ a {
   justify-content: center;
   align-items: center;
   background-color: #99E2D0;
-  color: beige;
+  color: white;
   width: 0;
   margin: 0;
 }
 .food .select .fa-check-circle {
   opacity: 0;
   font-size: 2rem;
-  transition-duration: 250ms;
+  transition-duration: 550ms;
 }
 @media screen and (min-width: 700px) {
   .food .select {
@@ -192,6 +193,76 @@ button {
   border-radius: 25px;
   height: 2.5rem;
   border: none;
+}
+
+.heart_container-alt {
+  font-size: x-large;
+  position: relative;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 700px) {
+  .heart_container-alt {
+    font-size: 3rem;
+  }
+}
+
+.heart_container-alt:hover::before {
+  opacity: 1;
+  transition: 5ms;
+  content: "";
+  background: linear-gradient(0deg, #9356dc, #ff79da);
+  position: inherit;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  max-width: 24px;
+  max-height: 24px;
+  right: 35px;
+  top: 0px;
+}
+@media screen and (min-width: 700px) {
+  .heart_container-alt:hover::before {
+    width: 72px;
+    height: 48px;
+    max-width: 48px;
+    max-height: 72px;
+    right: 67px;
+  }
+}
+
+.heart-alt {
+  opacity: 1;
+  position: relative;
+  right: 35px;
+  top: 0;
+  background-color: #f6f6f6;
+}
+@media screen and (min-width: 700px) {
+  .heart-alt {
+    right: 67px;
+  }
+}
+.heart-alt:hover {
+  opacity: 0;
+}
+
+.solid-heart-alt {
+  position: relative;
+  right: 11px;
+  opacity: 1;
+  background-color: #f6f6f6;
+  mix-blend-mode: lighten;
+  color: #000000;
+}
+@media screen and (min-width: 700px) {
+  .solid-heart-alt {
+    right: 19px;
+  }
 }
 
 a {
@@ -255,10 +326,17 @@ a {
   position: absolute;
   width: 2rem;
   height: 2rem;
-  /* max-width: 32px; */
-  /* max-height: 30px; */
-  left: 22px;
+  max-width: 16px;
+  max-height: 16px;
+  left: 6px;
   top: 0px;
+}
+@media screen and (min-width: 700px) {
+  .cart .cart_text .heart_container:hover::before {
+    max-height: none;
+    max-width: none;
+    left: 22px;
+  }
 }
 .cart .cart_text .fa-heart {
   opacity: 1;
@@ -272,11 +350,16 @@ a {
 }
 .cart .cart_text .solid-heart {
   position: relative;
-  left: 22px;
+  left: 6px;
   opacity: 1;
   background-color: #FFFF;
   mix-blend-mode: lighten;
   color: #000000;
+}
+@media screen and (min-width: 700px) {
+  .cart .cart_text .solid-heart {
+    left: 22px;
+  }
 }
 
 .picture_container {
@@ -289,7 +372,10 @@ a {
   background: #f6f6f6;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  padding: 1rem 0.5rem;
+  padding: 1rem;
+}
+.container_food h2 {
+  font-weight: 100;
 }
 .container_food h2::after {
   display: flex;
@@ -321,7 +407,7 @@ a {
   justify-content: space-between;
   width: 95%;
   align-items: flex-end;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0.5rem 0.5rem;
 }
 .food_container-txt .menu {
   text-overflow: ellipsis;
@@ -343,20 +429,14 @@ a {
 .title-page h1 {
   font-size: x-large;
 }
-.title-page .fa-heart2 {
-  font-size: x-large;
-  margin-right: 2rem;
-}
 @media screen and (min-width: 700px) {
   .title-page {
+    justify-content: space-around;
     font-size: large;
   }
   .title-page h1 {
     margin: 0;
-  }
-  .title-page .fa-heart2 {
-    font-size: x-large;
-    margin: 0 20% 0 0;
+    font-size: 3rem;
   }
 }
 
@@ -380,7 +460,6 @@ a {
 @media screen and (min-width: 700px) {
   .food .food_text-size-max {
     font-size: 1.5rem;
-    background: #f6f6f6;
     border-radius: 15px;
     text-align: center;
   }
@@ -575,7 +654,7 @@ header {
   font-size: large;
   position: relative;
   bottom: 27px;
-  right: 40px;
+  right: 120px;
 }
 
 body {
@@ -626,6 +705,7 @@ body {
   height: 100px;
   justify-content: center;
   align-items: flex-start;
+  margin-top: -33px;
 }
 
 footer {
@@ -658,6 +738,15 @@ footer li {
 }
 .container-footer li {
   list-style: none;
+}
+.container-footer li i {
+  margin-right: 1rem;
+  width: 13px;
+}
+@media screen and (min-width: 700px) {
+  .container-footer li i {
+    width: auto;
+  }
 }
 .container-footer .logo-txt {
   font-family: Shrikhand;

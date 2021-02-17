@@ -27,6 +27,14 @@ footer{
 
   li{
     list-style: none;
+    i{
+      margin-right: 1rem;
+      width: 13px;
+      @media screen and(min-width:700px) {
+        width: auto;
+        
+      }
+    }
   }
   .logo-txt{
     font-family:$font-family-title;

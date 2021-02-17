@@ -59,10 +59,16 @@ a{
       position: absolute;
       width: 2rem;
       height: 2rem;
-      /* max-width: 32px; */
-      /* max-height: 30px; */
-      left: 22px;
+      max-width: 16px;
+      max-height: 16px;
+      left: 6px;
       top: 0px;
+      @media  screen and(min-width:700px) {
+        max-height: none;
+        max-width: none;
+        left: 22px;
+        
+      }
       
     }
     
@@ -84,14 +90,17 @@ a{
     }
     .solid-heart{
       position: relative;
-      left: 22px;
+      left: 6px;
       opacity: 1;
       background-color: #FFFF;
       mix-blend-mode: lighten;
       color: #000000;
-      
+      @media  screen and(min-width:700px) {
+        
+        left: 22px;
+        
+      }
 
-      
     }
 
   }
