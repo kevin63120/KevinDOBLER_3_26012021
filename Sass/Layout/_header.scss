@@ -16,7 +16,7 @@ header{
   text-align: center;
   padding: 1rem 0rem 1rem 0;
 
-  box-shadow: #D2D2D2 0px 4px 0px 0px;
+  box-shadow: black 0px 3px 7px -4px;
 
 
 
@@ -66,21 +66,18 @@ header{
 }
 .container_step_title{
   padding-left: 0.5rem;
-  h2{margin: 0 0 0 2%;
+  h2{margin: 3rem 0 0 2%;
   }
 
 }
 .steps_container{
-  h2{
-
-  }
+  
 
  padding: 1rem;
  @media screen and(min-width:1400px ) {
    display: flex;
    justify-content: space-evenly;
- ;
-   
+ 
  }
 
 
@@ -89,9 +86,10 @@ header{
   display: flex;
   align-items: center;
   padding-right: 1rem;
-
+  box-shadow: #d2d2d2  0px 3px 7px -4px;
   border-radius: 15px;
   background: $color-background-secondary;
+  cursor: pointer;
 
   height: 4rem;
   margin: 1rem 0 0 0;
@@ -106,7 +104,7 @@ header{
      width: 1rem;
      height: 1rem;
      font-size: x-small;
-     /* text-align: center; */
+     
      position: relative;
      border: $color-primary 1px solid;
      background-color: $color-primary;

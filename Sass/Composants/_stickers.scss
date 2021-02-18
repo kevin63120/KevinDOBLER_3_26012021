@@ -1,14 +1,14 @@
 .stickers-new{
-  background: $color-tertiary;
-  color: darken($color-tertiary,40);
+  background: #99E2D0;
+  color: #278870;
   width: max-content;
-  padding:0.4rem;
+  padding: 0.4rem 1rem;
   border-radius: 2px;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   position: absolute;
+  font-weight: bold;
   top: 15px;
   right: 15px;
-
 
 }
 .new::after{

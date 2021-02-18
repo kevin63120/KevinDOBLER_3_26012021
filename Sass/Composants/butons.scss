@@ -7,6 +7,7 @@ button{
   border-radius: 25px;
   height: 2.5rem;
   border:none;
+  cursor: pointer;
 }
 
 
@@ -29,29 +30,33 @@ $heart_before-size:5rem;
 
 .heart_container-alt:hover::before{
   opacity: 1;
-  transition: 5ms;
-  content: "";
-  background: linear-gradient(
+    transition: 5ms;
+    content: "";
+    background: linear-gradient(
 0deg
 , #9356dc, #ff79da);
-  position: inherit;
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  width: 2rem;
-  height: 2rem;
-  max-width: 24px;
-  max-height: 24px;
-  right: 35px;
-  top: 0px;
-  @media screen and (min-width:700px) {
-    width: 72px;
+    position: inherit;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    max-width: 22px;
+    max-height: 24px;
+    right: 36px;
+    top: 0px;
+
+    @media  screen and (min-width:700px) {
+    
+    width: 48px;
     height: 48px;
     max-width: 48px;
-    max-height: 72px;
+    max-height: 48px;
     right: 67px;
+      
+    }
     
-  }
+  
 }
 
 
