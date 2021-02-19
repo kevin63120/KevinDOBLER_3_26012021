@@ -1,48 +1,40 @@
-footer{
+footer {
   @include footer-color(#353535, white);
 
   padding: 1rem;
- p{
-   margin: 0.5rem 0;
- }
- li{
-  margin: 0.5rem 0;
-}
+  p {
+    margin: 0.5rem 0;
+  }
+  li {
+    margin: 0.5rem 0;
+  }
   @media screen and (min-width: 700px) {
     display: flex;
     justify-content: center;
-    .container-footer{
-
+    .container-footer {
       text-align: center;
       font-size: 1.5rem;
     }
-
   }
-
 }
 
-.container-footer{
-
+.container-footer {
   margin-left: 0.4rem;
 
-  li{
+  li {
     list-style: none;
     cursor: pointer;
-    
-    i{
+
+    i {
       margin-right: 1rem;
       width: 13px;
       @media screen and(min-width:700px) {
         width: auto;
-        
       }
     }
   }
-  .logo-txt{
-    font-family:$font-family-title;
+  .logo-txt {
+    font-family: $font-family-title;
     font-size: x-large;
-
-
   }
-
 }

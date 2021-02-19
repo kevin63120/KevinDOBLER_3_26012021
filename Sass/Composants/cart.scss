@@ -1,9 +1,8 @@
-a{
+a {
   text-decoration: none;
 }
-.cart{
-  
-  @include cart-color(#FFFF, #000000);
+.cart {
+  @include cart-color(#ffff, #000000);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -12,52 +11,45 @@ a{
   margin: 1rem 0 0.4rem 0;
   border-radius: 15px;
   box-shadow: #d2d2d2 3px 3px 19px 7px;
-    @media screen and (min-width:700px){
-      margin: 2rem;
-      max-width: 450px;
-      font-size: 2rem;
-      font-weight: bold;
-
-    }
-  .cart_image{
+  @media screen and (min-width: 700px) {
+    margin: 2rem;
+    max-width: 450px;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .cart_image {
     @include carte;
     position: relative;
-    .image_restaurant{
-
-
+    .image_restaurant {
       @include cart_image-size();
     }
   }
-  .cart_text{
+  .cart_text {
     display: flex;
 
     padding: 0 1rem;
     justify-content: space-between;
     align-items: center;
-      .cart_text-bold{
-        font-weight: bold;
-        margin-bottom: 0.2rem;
-      }
+    .cart_text-bold {
+      font-weight: bold;
+      margin-bottom: 0.2rem;
+    }
 
-    
-     .heart_container{
+    .heart_container {
       position: relative;
-      background-color: #FFFF;
+      background-color: #ffff;
       display: flex;
       justify-content: center;
       align-items: center;
       font-size: xx-large;
       font-weight: lighter;
-      
     }
-    
-    .heart_container:hover::before{
+
+    .heart_container:hover::before {
       opacity: 1;
       transition: 5ms;
       content: "";
-      background: linear-gradient(
-  0deg
-  , #9356dc, #ff79da);
+      background: linear-gradient(0deg, #9356dc, #ff79da);
       position: inherit;
       width: 100px;
       height: 100px;
@@ -68,45 +60,32 @@ a{
       max-height: 33px;
       left: 18px;
       top: 0px;
-      @media  screen and(min-width:700px) {
+      @media screen and(min-width:700px) {
         max-height: none;
         max-width: none;
-        
-        
       }
-      
     }
-    
-   
-    
-     .fa-heart{
-       opacity: 1;
-      
+
+    .fa-heart {
+      opacity: 1;
+
       position: relative;
       right: 14px;
       top: 0;
-      background: #FFFF;
-      
-      &:hover{
-        opacity: 0;
+      background: #ffff;
 
+      &:hover {
+        opacity: 0;
       }
-      
     }
-    .solid-heart{
+    .solid-heart {
       position: relative;
-     // left: 6px;
-     left: 18px;
+      // left: 6px;
+      left: 18px;
       opacity: 1;
-      background-color: #FFFF;
+      background-color: #ffff;
       mix-blend-mode: lighten;
       color: #000000;
-      
-
     }
-
   }
 }
-
-
-

@@ -1,39 +1,31 @@
-body{
+body {
   background-color: $color-background-primary;
   font-family: $font-family-txt;
   margin: 0;
-
-
-
 }
 
-
-.container_carts{
+.container_carts {
   @include padding-flex-mobile-desktop;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   background: $color-background-secondary;
   padding-bottom: 4rem;
-  h2{
+  h2 {
     width: 100%;
     margin-left: 3%;
 
-  @media screen and (min-width: 700px) {
-    max-width: 100%;
-
+    @media screen and (min-width: 700px) {
+      max-width: 100%;
+    }
   }
-  }
-
 }
 //specific body (content pages)
 
-.body_pages{
+.body_pages {
   background-color: $color-background-secondary;
-
 }
-.button-position{
-  @include box-position($axey:flex-start);
+.button-position {
+  @include box-position($axey: flex-start);
   margin-top: -33px;
 }
-

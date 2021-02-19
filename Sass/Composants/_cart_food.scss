@@ -1,134 +1,103 @@
-.container_food{
-
-  
+.container_food {
   position: relative;
   bottom: 50px;
   background: $color-background-secondary;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  padding: 1rem ;
-  h2{
+  padding: 1rem;
+  h2 {
     font-weight: 100;
-    &::after{
+    &::after {
       display: flex;
       content: "";
-      border: #99E2D0 2px solid;
+      border: #99e2d0 2px solid;
       width: 50px;
       margin-top: 0.5rem;
     }
   }
 
-  @media screen and (min-width: 700px){
+  @media screen and (min-width: 700px) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 
-    h2{
+    h2 {
       width: 100%;
       padding-left: 2rem;
-
     }
-    .title-page{
+    .title-page {
       width: 100%;
       font-size: 4.5rem;
 
       margin-left: 2rem;
       margin-bottom: 2rem;
     }
-
   }
 }
 
-.food_container-txt{
+.food_container-txt {
   display: flex;
   justify-content: space-between;
   width: 95%;
   align-items: flex-end;
   padding: 0.5rem 0 0.5rem 0.5rem;
-  .menu{
-  @include suspention-points;
+  .menu {
+    @include suspention-points;
   }
-  @media  screen and (min-width:700px) {
-  
-  padding: 1rem 0;     
+  @media screen and (min-width: 700px) {
+    padding: 1rem 0;
   }
-  
 }
 
-
-
-.title-page{
+.title-page {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: "Shrikhand", serif;
 
-  h1{
+  h1 {
     font-size: x-large;
-
-
   }
-  
 
-  @media screen and (min-width: 700px)
-  {
+  @media screen and (min-width: 700px) {
     justify-content: space-around;
     font-size: large;
-    h1{
-      margin:0;
+    h1 {
+      margin: 0;
       font-size: 3rem;
-
     }
-    
   }
-
 }
 
-.food{
+.food {
   background: $color-background-primary;
-    display: flex;
-    overflow: hidden; 
-    justify-content: space-between; 
-    align-items: flex-end; 
-    border-radius: 15px;
-    margin: 2rem 0;
-    box-shadow: #d2d2d2 4px 4px 15px 5px;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-radius: 15px;
+  margin: 2rem 0;
+  box-shadow: #d2d2d2 4px 4px 15px 5px;
 
-  p{
-    
+  p {
     padding: 0.2rem 0.5rem 0.2rem 0.2rem;
     margin: 0;
-
-
   }
 
-
-  .food_text-size-max{
-    
+  .food_text-size-max {
     font-weight: bold;
-    @media screen and (min-width: 700px){
-      font-size:1.5rem;
-      
-      
+    @media screen and (min-width: 700px) {
+      font-size: 1.5rem;
+
       border-radius: 15px;
       text-align: center;
     }
   }
 
-  
-
   @media screen and (min-width: 700px) {
+    width: 25rem;
 
-
-      width: 25rem;
-      
-      display: flex;
-      align-items: end;
-      
-     
-
-
-
+    display: flex;
+    align-items: end;
   }
 }
-

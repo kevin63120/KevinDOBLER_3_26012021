@@ -1,19 +1,16 @@
-
-button{
-
-  color:white;
-  background:linear-gradient($color-button-background, $color-primary) ;
+button {
+  color: white;
+  background: linear-gradient($color-button-background, $color-primary);
   width: 10.5rem;
   border-radius: 25px;
   height: 2.5rem;
-  border:none;
+  border: none;
   cursor: pointer;
 }
 
-
-// button heart generate 
-$heart_before-size:5rem;
-.heart_container-alt{
+// button heart generate
+$heart_before-size: 5rem;
+.heart_container-alt {
   font-size: x-large;
   position: relative;
   background-color: #f6f6f6;
@@ -21,78 +18,59 @@ $heart_before-size:5rem;
   justify-content: center;
   align-items: center;
 
-  @media screen and (min-width:700px) {
+  @media screen and (min-width: 700px) {
     font-size: 3rem;
-    
   }
-  
 }
 
-.heart_container-alt:hover::before{
+.heart_container-alt:hover::before {
   opacity: 1;
-    transition: 5ms;
-    content: "";
-    background: linear-gradient(
-0deg
-, #9356dc, #ff79da);
-    position: inherit;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    width: 2rem;
-    height: 2rem;
-    max-width: 22px;
-    max-height: 24px;
-    right: 36px;
-    top: 0px;
+  transition: 5ms;
+  content: "";
+  background: linear-gradient(0deg, #9356dc, #ff79da);
+  position: inherit;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  max-width: 22px;
+  max-height: 24px;
+  right: 36px;
+  top: 0px;
 
-    @media  screen and (min-width:700px) {
-    
+  @media screen and (min-width: 700px) {
     width: 48px;
     height: 48px;
     max-width: 48px;
     max-height: 48px;
     right: 67px;
-      
-    }
-    
-  
+  }
 }
 
+.heart-alt {
+  opacity: 1;
 
-
- .heart-alt{
-   opacity: 1;
-  
   position: relative;
   right: 35px;
   top: 0;
   background-color: #f6f6f6;
-  @media screen and (min-width:700px) {
-   
+  @media screen and (min-width: 700px) {
     right: 67px;
-    
   }
 
-  &:hover{
+  &:hover {
     opacity: 0;
-
   }
-  
 }
-.solid-heart-alt{
+.solid-heart-alt {
   position: relative;
   right: 11px;
   opacity: 1;
   background-color: #f6f6f6;
   mix-blend-mode: lighten;
   color: #000000;
-  @media screen and (min-width:700px) {
-
+  @media screen and (min-width: 700px) {
     right: 19px;
-    
   }
-  
-
-  
 }

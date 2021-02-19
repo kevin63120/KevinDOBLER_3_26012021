@@ -1,5 +1,5 @@
-.stickers-new{
-  background: #99E2D0;
+.stickers-new {
+  background: #99e2d0;
   color: #278870;
   width: max-content;
   padding: 0.4rem 1rem;
@@ -9,17 +9,16 @@
   font-weight: bold;
   top: 15px;
   right: 15px;
-
 }
-.new::after{
-    content: 'nouveau';
-    background: $color-tertiary;
-    width: max-content;
+.new::after {
+  content: "nouveau";
+  background: $color-tertiary;
+  width: max-content;
 
-    padding:0.4rem;
-    border-radius: 2px;
-    font-size: 1.2rem;
-    position: relative;
+  padding: 0.4rem;
+  border-radius: 2px;
+  font-size: 1.2rem;
+  position: relative;
 
-    right: 0;
-  }
+  right: 0;
+}
