@@ -77,7 +77,7 @@ a {
     top: 50%;
   }
   20% {
-    height: 250pX;
+    height: 250px;
     width: 250px;
   }
   50% {
@@ -100,7 +100,7 @@ a {
   }
   20% {
     bottom: 0;
-    height: 20pX;
+    height: 20px;
     width: 20px;
   }
   50% {
@@ -130,7 +130,7 @@ a {
     transform: rotate(0);
   }
   to {
-    transform: rotate(1);
+    transform: rotate(1turn);
   }
 }
 .step:hover {
@@ -281,7 +281,7 @@ a {
 }
 
 .cart {
-  background: #FFFF;
+  background: #ffff;
   color: #000000;
   display: flex;
   flex-wrap: wrap;
@@ -324,7 +324,7 @@ a {
 }
 .cart .cart_text .heart_container {
   position: relative;
-  background-color: #FFFF;
+  background-color: #ffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -358,7 +358,7 @@ a {
   position: relative;
   right: 14px;
   top: 0;
-  background: #FFFF;
+  background: #ffff;
 }
 .cart .cart_text .fa-heart:hover {
   opacity: 0;
@@ -367,7 +367,7 @@ a {
   position: relative;
   left: 18px;
   opacity: 1;
-  background-color: #FFFF;
+  background-color: #ffff;
   mix-blend-mode: lighten;
   color: #000000;
 }
@@ -390,7 +390,7 @@ a {
 .container_food h2::after {
   display: flex;
   content: "";
-  border: #99E2D0 2px solid;
+  border: #99e2d0 2px solid;
   width: 50px;
   margin-top: 0.5rem;
 }
@@ -483,7 +483,7 @@ a {
 }
 
 .stickers-new {
-  background: #99E2D0;
+  background: #99e2d0;
   color: #278870;
   width: max-content;
   padding: 0.4rem 1rem;
@@ -640,7 +640,6 @@ header {
   height: 1rem;
   font-size: x-small;
   position: relative;
-  border: #9356DC 1px solid;
   background-color: #9356DC;
   color: white;
   border-radius: 62%;
@@ -725,9 +724,6 @@ footer {
   color: white;
   padding: 1rem;
 }
-footer ul {
-  padding-inline-start: 0;
-}
 footer p {
   margin: 0.5rem 0;
 }
@@ -747,6 +743,9 @@ footer li {
 
 .container-footer {
   margin-left: 0.4rem;
+}
+.container-footer ul {
+  padding: 0;
 }
 .container-footer li {
   list-style: none;
