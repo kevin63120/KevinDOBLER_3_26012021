@@ -58,12 +58,13 @@ a {
       height: 2rem;
       max-width: 33px;
       max-height: 33px;
-      left: 18px;
+      left: 35px;
       top: 0px;
       @media screen and(min-width:700px) {
         max-height: none;
         max-width: none;
-        width: 49;
+        width: 32px;
+        
       }
     }
 
@@ -71,24 +72,32 @@ a {
       opacity: 1;
 
       position: relative;
-      right: 14px;
+      right: 15px;
       top: 0;
       background: #ffff;
 
       &:hover {
-        opacity: 1;
-        background:#000000;
+        opacity: 0;
+        
+      }
+      @media  screen and (min-width: 700px ) {
+        right: 15px;
+        
       }
     }
     .solid-heart {
       position: relative;
-      width: 49px;
+      width: 50px;
       // left: 6px;
-      left: 19px;
+      left: 35px;
       opacity: 1;
       background-color: #ffff;
       mix-blend-mode: lighten;
       color: #000000;
+      @media screen and (min-width: 700px) {
+        width: 50px;
+        left: 35px;
+      }
     }
   }
 }

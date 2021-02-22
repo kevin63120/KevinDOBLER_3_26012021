@@ -1,17 +1,20 @@
 button {
   color: white;
-  //background: linear-gradient($color-button-background, $color-primary);
-  background-image: linear-gradient($color-button-background, $color-primary);
-  background-color: grey;
+  background: linear-gradient($color-button-background, $color-primary);
+  
   width: 10.5rem;
   border-radius: 25px;
   height: 2.5rem;
   border: none;
   cursor: pointer;
   box-shadow: #d2d2d2 3px 3px 19px 7px;
+  transition-duration: 2sec;
+  opacity: 1;
    &:hover{
      
-     background-color: #FFFF;
+     
+    //background:linear-gradient($color-primary-light,$color_button_background-light)
+    opacity: 0.9;
    }
 
 }

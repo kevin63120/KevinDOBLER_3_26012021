@@ -94,7 +94,7 @@ a {
     display: block;
     opacity: 1;
     left: 50%;
-    top: 60%;
+    top: 50%;
     height: 0;
     width: 0;
   }
@@ -198,17 +198,18 @@ a {
 
 button {
   color: white;
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  background-color: grey;
+  background: linear-gradient(#FF79DA, #9356DC);
   width: 10.5rem;
   border-radius: 25px;
   height: 2.5rem;
   border: none;
   cursor: pointer;
   box-shadow: #d2d2d2 3px 3px 19px 7px;
+  transition-duration: 2sec;
+  opacity: 1;
 }
 button:hover {
-  background-color: #FFFF;
+  opacity: 0.9;
 }
 
 .heart_container-alt {
@@ -353,35 +354,45 @@ a {
   height: 2rem;
   max-width: 33px;
   max-height: 33px;
-  left: 18px;
+  left: 35px;
   top: 0px;
 }
 @media screen and (min-width: 700px) {
   .cart .cart_text .heart_container:hover::before {
     max-height: none;
     max-width: none;
-    width: 49;
+    width: 32px;
   }
 }
 .cart .cart_text .fa-heart {
   opacity: 1;
   position: relative;
-  right: 14px;
+  right: 15px;
   top: 0;
   background: #ffff;
 }
 .cart .cart_text .fa-heart:hover {
-  opacity: 1;
-  background: #000000;
+  opacity: 0;
+}
+@media screen and (min-width: 700px) {
+  .cart .cart_text .fa-heart {
+    right: 15px;
+  }
 }
 .cart .cart_text .solid-heart {
   position: relative;
-  width: 49px;
-  left: 19px;
+  width: 50px;
+  left: 35px;
   opacity: 1;
   background-color: #ffff;
   mix-blend-mode: lighten;
   color: #000000;
+}
+@media screen and (min-width: 700px) {
+  .cart .cart_text .solid-heart {
+    width: 50px;
+    left: 35px;
+  }
 }
 
 .picture_container {
@@ -640,6 +651,11 @@ header {
   position: relative;
   bottom: 27px;
   right: 120px;
+}
+@media screen and (max-width: 500px) {
+  .fa-arrow-left {
+    right: 17px;
+  }
 }
 
 body {

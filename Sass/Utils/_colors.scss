@@ -20,4 +20,6 @@ $color-footer-txt:#F8F8F8;
 $color-button:white; 
 $color_button_background: #FF79DA;
 $color_button-light:lighten($color-primary,40%);
+$color-primary-light:lighten($color-primary,5%);
+$color_button_background-light:lighten($color_button_background,5%);
 
