@@ -1,11 +1,19 @@
 button {
   color: white;
-  background: linear-gradient($color-button-background, $color-primary);
+  //background: linear-gradient($color-button-background, $color-primary);
+  background-image: linear-gradient($color-button-background, $color-primary);
+  background-color: grey;
   width: 10.5rem;
   border-radius: 25px;
   height: 2.5rem;
   border: none;
   cursor: pointer;
+  box-shadow: #d2d2d2 3px 3px 19px 7px;
+   &:hover{
+     
+     background-color: #FFFF;
+   }
+
 }
 
 // button heart generate
@@ -27,22 +35,24 @@ $heart_before-size: 5rem;
   opacity: 1;
   transition: 5ms;
   content: "";
-  background: linear-gradient(0deg, #9356dc, #ff79da);
+  background: linear-gradient(
+0deg
+, #9356dc, #ff79da);
   position: inherit;
   width: 100px;
   height: 100px;
   position: absolute;
   width: 2rem;
   height: 2rem;
-  max-width: 22px;
+  max-width: 27px;
   max-height: 24px;
-  right: 36px;
+  right: 35px;
   top: 0px;
 
   @media screen and (min-width: 700px) {
-    width: 48px;
+    width: 50px;
     height: 48px;
-    max-width: 48px;
+    max-width: 50px;
     max-height: 48px;
     right: 67px;
   }
@@ -55,22 +65,27 @@ $heart_before-size: 5rem;
   right: 35px;
   top: 0;
   background-color: #f6f6f6;
+  width: 27px;;
   @media screen and (min-width: 700px) {
     right: 67px;
+    width: 50px;
   }
 
   &:hover {
     opacity: 0;
+
   }
 }
 .solid-heart-alt {
   position: relative;
-  right: 11px;
+  right: 8px;
   opacity: 1;
   background-color: #f6f6f6;
   mix-blend-mode: lighten;
   color: #000000;
+  width: 27px;
   @media screen and (min-width: 700px) {
-    right: 19px;
+    right: 17px;
+    width: 50px;
   }
 }

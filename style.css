@@ -198,12 +198,17 @@ a {
 
 button {
   color: white;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-color: grey;
   width: 10.5rem;
   border-radius: 25px;
   height: 2.5rem;
   border: none;
   cursor: pointer;
+  box-shadow: #d2d2d2 3px 3px 19px 7px;
+}
+button:hover {
+  background-color: #FFFF;
 }
 
 .heart_container-alt {
@@ -231,16 +236,16 @@ button {
   position: absolute;
   width: 2rem;
   height: 2rem;
-  max-width: 22px;
+  max-width: 27px;
   max-height: 24px;
-  right: 36px;
+  right: 35px;
   top: 0px;
 }
 @media screen and (min-width: 700px) {
   .heart_container-alt:hover::before {
-    width: 48px;
+    width: 50px;
     height: 48px;
-    max-width: 48px;
+    max-width: 50px;
     max-height: 48px;
     right: 67px;
   }
@@ -252,10 +257,12 @@ button {
   right: 35px;
   top: 0;
   background-color: #f6f6f6;
+  width: 27px;
 }
 @media screen and (min-width: 700px) {
   .heart-alt {
     right: 67px;
+    width: 50px;
   }
 }
 .heart-alt:hover {
@@ -264,15 +271,17 @@ button {
 
 .solid-heart-alt {
   position: relative;
-  right: 11px;
+  right: 8px;
   opacity: 1;
   background-color: #f6f6f6;
   mix-blend-mode: lighten;
   color: #000000;
+  width: 27px;
 }
 @media screen and (min-width: 700px) {
   .solid-heart-alt {
-    right: 19px;
+    right: 17px;
+    width: 50px;
   }
 }
 
@@ -292,7 +301,7 @@ a {
   border-radius: 15px;
   box-shadow: #d2d2d2 3px 3px 19px 7px;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 674px) {
   .cart {
     margin: 2rem;
     max-width: 450px;
@@ -351,6 +360,7 @@ a {
   .cart .cart_text .heart_container:hover::before {
     max-height: none;
     max-width: none;
+    width: 49;
   }
 }
 .cart .cart_text .fa-heart {
@@ -361,11 +371,13 @@ a {
   background: #ffff;
 }
 .cart .cart_text .fa-heart:hover {
-  opacity: 0;
+  opacity: 1;
+  background: #000000;
 }
 .cart .cart_text .solid-heart {
   position: relative;
-  left: 18px;
+  width: 49px;
+  left: 19px;
   opacity: 1;
   background-color: #ffff;
   mix-blend-mode: lighten;
@@ -477,6 +489,7 @@ a {
 @media screen and (min-width: 700px) {
   .food {
     width: 25rem;
+    margin: 1rem 1rem;
     display: flex;
     align-items: end;
   }
@@ -526,19 +539,9 @@ header {
   background-color: #EAEAEA;
   text-align: center;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1500px) {
   .container_localisation {
-    padding: 0 10%;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .container_localisation {
-    padding: 0 20%;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .container_localisation {
-    padding: 0 20%;
+    padding: 0 5%;
   }
 }
 .container_localisation p {
@@ -554,49 +557,20 @@ header {
   padding: 2rem 0 2rem;
   background: #f6f6f6;
 }
-@media screen and (min-width: 700px) {
-  .presentation {
-    padding: 0 10%;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .presentation {
-    padding: 0 20%;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .presentation {
-    padding: 0 20%;
-  }
-}
-@media screen and (min-width: 700px) {
-  .presentation {
-    padding-bottom: 2rem;
-  }
-}
 .presentation h1 {
   text-align: center;
   width: 80%;
   margin-bottom: 0;
+  margin: 0;
 }
 .presentation p {
   text-align: center;
   margin-top: 0.5rem;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1500px) {
   .section_steps_container {
-    padding: 0 10%;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .section_steps_container {
-    padding: 0 20%;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .section_steps_container {
-    padding: 0 20%;
+    padding: 0 5%;
   }
 }
 
@@ -681,19 +655,9 @@ body {
   background: #f6f6f6;
   padding-bottom: 4rem;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1500px) {
   .container_carts {
-    padding: 0 10%;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .container_carts {
-    padding: 0 20%;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .container_carts {
-    padding: 0 20%;
+    padding: 0 5%;
   }
 }
 .container_carts h2 {

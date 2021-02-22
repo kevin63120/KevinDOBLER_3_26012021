@@ -42,14 +42,9 @@
 
 }
 @mixin padding-flex-mobile-desktop {
-  @media screen and (min-width: 700px){
-    padding: 0 10%;
-  }
-  @media screen and (min-width: 1000px){
-    padding: 0 20%;
-  }
-  @media screen and (min-width: 1200px){
-    padding: 0 20%;
+  
+  @media screen and (min-width: 1500px){
+    padding: 0 5%;
   }
 
 }
