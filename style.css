@@ -204,12 +204,13 @@ button {
   height: 2.5rem;
   border: none;
   cursor: pointer;
-  box-shadow: #d2d2d2 3px 3px 19px 7px;
-  transition-duration: 2sec;
+  box-shadow: #d2d2d2 3px 3px 10px 7px;
+  transition: all 2sec;
   opacity: 1;
 }
 button:hover {
   opacity: 0.9;
+  box-shadow: #c5c5c5 3px 3px 5px 5px;
 }
 
 .heart_container-alt {
@@ -709,6 +710,12 @@ footer p {
 }
 footer li {
   margin: 0.5rem 0;
+}
+footer li a {
+  color: #FFFF;
+}
+footer li:hover {
+  box-shadow: rgba(255, 255, 255, 0.315) 1px 1px 5px 1px;
 }
 @media screen and (min-width: 700px) {
   footer {

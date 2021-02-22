@@ -7,14 +7,15 @@ button {
   height: 2.5rem;
   border: none;
   cursor: pointer;
-  box-shadow: #d2d2d2 3px 3px 19px 7px;
-  transition-duration: 2sec;
+  box-shadow: #d2d2d2 3px 3px 10px 7px;
+  transition: all 2sec;
   opacity: 1;
    &:hover{
      
      
     //background:linear-gradient($color-primary-light,$color_button_background-light)
     opacity: 0.9;
+    box-shadow: #c5c5c5 3px 3px 5px 05px;
    }
 
 }
