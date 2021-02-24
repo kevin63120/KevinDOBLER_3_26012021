@@ -199,18 +199,62 @@ a {
 button {
   color: white;
   background: linear-gradient(#FF79DA, #9356DC);
+  position: relative;
   width: 10.5rem;
   border-radius: 25px;
   height: 2.5rem;
   border: none;
   cursor: pointer;
   box-shadow: #d2d2d2 3px 3px 10px 7px;
-  transition: all 2sec;
+  transition: display 0.3s;
   opacity: 1;
 }
-button:hover {
-  opacity: 0.9;
-  box-shadow: #c5c5c5 3px 3px 5px 5px;
+button.rest::after {
+  content: "Explorer nos restaurants";
+  color: white;
+  background: linear-gradient(#fface8, #ae80e5);
+  position: absolute;
+  width: 10.5rem;
+  border-radius: 25px;
+  height: 2.5rem;
+  left: 0px;
+  align-items: center;
+  top: 0;
+  border: none;
+  cursor: pointer;
+  box-shadow: #d2d2d2 3px 3px 10px 7px;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s;
+  opacity: 0;
+}
+button.rest:hover::after {
+  opacity: 1;
+}
+button.buy::after {
+  content: "Commander";
+  color: white;
+  background: linear-gradient(#fface8, #ae80e5);
+  position: absolute;
+  width: 10.5rem;
+  border-radius: 25px;
+  height: 2.5rem;
+  left: 0px;
+  align-items: center;
+  top: 0px;
+  border: none;
+  cursor: pointer;
+  box-shadow: #d2d2d2 3px 3px 10px 7px;
+  transition: all 2sec;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s;
+  opacity: 0;
+}
+button.buy:hover::after {
+  opacity: 1;
 }
 
 .heart_container-alt {
@@ -305,10 +349,16 @@ a {
 }
 @media screen and (min-width: 674px) {
   .cart {
+    flex-direction: column;
     margin: 2rem;
     max-width: 450px;
     font-size: 2rem;
     font-weight: bold;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .cart {
+    flex-direction: row;
   }
 }
 .cart .cart_image {
@@ -442,6 +492,7 @@ a {
   width: 95%;
   align-items: flex-end;
   padding: 0.5rem 0 0.5rem 0.5rem;
+  transition: width 0.4s;
 }
 .food_container-txt .menu {
   text-overflow: ellipsis;
@@ -541,6 +592,7 @@ header {
   font-family: Shrikhand, Serif;
   text-align: center;
   padding: 1rem 0rem 1rem 0;
+  position: relative;
   box-shadow: black 0px 3px 7px -4px;
 }
 
@@ -709,13 +761,14 @@ footer p {
   margin: 0.5rem 0;
 }
 footer li {
+  transition: text-shadow 0.3s;
   margin: 0.5rem 0;
 }
 footer li a {
   color: #FFFF;
 }
 footer li:hover {
-  box-shadow: rgba(255, 255, 255, 0.315) 1px 1px 5px 1px;
+  text-shadow: rgba(255, 255, 255, 0.315) 2px 2px;
 }
 @media screen and (min-width: 700px) {
   footer {

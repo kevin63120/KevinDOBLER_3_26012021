@@ -12,10 +12,16 @@ a {
   border-radius: 15px;
   box-shadow: #d2d2d2 3px 3px 19px 7px;
   @media screen and (min-width: 674px) {
+    flex-direction: column;
     margin: 2rem;
     max-width: 450px;
     font-size: 2rem;
     font-weight: bold;
+  }
+  
+  @media screen and (min-width:1400px) {
+    flex-direction: row;
+    
   }
   .cart_image {
     @include carte;
