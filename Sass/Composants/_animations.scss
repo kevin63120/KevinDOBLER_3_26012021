@@ -82,7 +82,7 @@
     top: 50%;
   }
   20% {
-    // bottom: 0;
+   
     height: 250px;
     width: 250px;
   }
@@ -90,9 +90,7 @@
   50% {
     opacity: 1;
 
-    //top:50%;
-
-    //transform: rotateY(360deg);
+    
   }
 
   100% {
@@ -105,9 +103,7 @@
   0% {
     position: fixed;
     display: block;
-
     opacity: 1;
-    // transform: rotateY(180deg);
     left: 50%;
     top: 50%;
     height: 0;
@@ -121,9 +117,7 @@
 
   50% {
     opacity: 1;
-
     top: 50%;
-
     transform: rotateY(360deg);
   }
 
@@ -155,7 +149,7 @@
   }
 }
 
-//start animation in Sass
+
 
 .step {
   &:hover {
@@ -170,6 +164,7 @@
   @include animation-heart();
 }
 
+//animation of menu in pages.
 .anim-delai1 {
   animation: aparition-menu 2000ms cubic-bezier(1, 0.07, 0.2, 0.96);
 }
