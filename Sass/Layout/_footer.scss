@@ -1,7 +1,11 @@
 footer {
   @include footer-color(#353535, white);
 
-  padding: 1rem;
+  padding: 5%;
+
+  @media screen and (min-width:650px) {
+  padding: 35px 5%;    
+  }
   p {
     margin: 0.5rem 0;
   }
@@ -17,7 +21,7 @@ footer {
       
     }
   }
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 650px) {
     display: flex;
     justify-content: center;
     .container-footer {

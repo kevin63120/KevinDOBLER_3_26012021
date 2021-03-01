@@ -1,5 +1,5 @@
 @mixin carte{
-  width:100% ;
+ width: 100%;
 
 
 }
@@ -17,12 +17,12 @@
 }
 
 @mixin cart_image-size($height-image: 180px,$border-top-left-radius: 15px, $border-top-right-radius: 15px ){
-  width: inherit;
+  width: 100%;
   object-fit: cover;
   height: $height-image;
   border-top-left-radius: $border-top-left-radius;
   border-top-right-radius: $border-top-right-radius;
-  z-index: 1;
+  //z-index: 1;
 }
 
 @mixin footer-color($color-background, $color ){
@@ -48,11 +48,11 @@
   }
 
 }
-@mixin mid-underline ($color:$color-tertiary){
+/*@mixin mid-underline ($color:$color-tertiary){
   content: "vsfg";
   border-bottom: 1px solid $color;
 
-}
+}*/
 @mixin suspention-points {
   text-overflow: ellipsis;
   white-space: nowrap;

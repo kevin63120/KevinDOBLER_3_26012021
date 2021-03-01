@@ -7,16 +7,23 @@ body {
 .container_carts {
   @include padding-flex-mobile-desktop;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+ 
   background: $color-background-secondary;
   padding-bottom: 4rem;
+  @media screen and(min-width:650px) {
+    flex-direction: row;
+      flex-wrap: wrap; 
+     justify-content: center;
+  }
   h2 {
-    width: 100%;
-    margin-left: 3%;
+    width: 95%;
+    margin: 3rem 0 2% 4%;
 
     @media screen and (min-width: 700px) {
-      max-width: 100%;
+      
+     
     }
   }
 }
