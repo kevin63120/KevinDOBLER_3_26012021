@@ -102,9 +102,13 @@ header {
 .background-image {
   width: 100%;
   height: auto;
-  max-height: 360px;
+  max-height: 250px;
   object-fit: cover;
+  @media screen and(width:650px){
+  max-height: 360px;
 }
+}
+  
 .header_pages {
   text-align: center;
 }
